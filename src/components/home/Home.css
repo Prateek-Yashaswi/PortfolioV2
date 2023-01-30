@@ -1,0 +1,55 @@
+#parent {
+  display: flex;
+  margin: auto;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 1%;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+#details {
+  position: relative;
+  width: 100%;
+}
+
+#avatar {
+  background-image: url("../../resources/images/prateek.png");
+  width: 50vw;
+  height: 50vh;
+  background-size: cover;
+  background-position: top center;
+  border-radius: 50%;
+  margin-right: 10%;
+}
+
+@media screen and (max-width: 600px) {
+  #parent {
+    display: block;
+    margin: auto;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 1%;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  #details {
+    margin-top: 8%;
+    position: relative;
+    width: 100%;
+  }
+
+  #avatar {
+    margin: auto;
+    width: 100%;
+    display: block;
+    background-image: url("../../resources/images/prateek.png");
+    background-size: cover;
+    background-position: top center;
+  }
+}

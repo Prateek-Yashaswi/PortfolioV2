@@ -1,0 +1,63 @@
+#parent-moreInfo {
+  display: block;
+  padding: 1%;
+}
+
+.sub-heading {
+  width: fit-content;
+  margin: auto;
+  border-bottom: 1px solid black;
+  margin-bottom: 3%;
+}
+
+#achievement-buttons-div {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  margin-top: 2%;
+}
+
+#tabs {
+  padding: 1%;
+}
+
+#cards {
+  display: flex;
+  width: fit-content;
+  margin: auto;
+}
+
+.customCard {
+  margin-left: 4%;
+  margin-bottom: 6%;
+}
+
+.description {
+  font-size: 140%;
+}
+
+#pagination {
+  margin: auto;
+  width: fit-content;
+}
+
+#cards-div {
+  display: flex;
+  margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+  #cards {
+    display: block;
+    width: fit-content;
+    margin: auto;
+  }
+
+  .customCard {
+    margin-top: 4%;
+  }
+
+  .description {
+    font-size: 80%;
+  }
+}
