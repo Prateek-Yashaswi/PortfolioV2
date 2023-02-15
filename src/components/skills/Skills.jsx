@@ -6,12 +6,11 @@ import * as React from "react";
 import Accordion from "react-bootstrap/Accordion";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
-import * as rdd from "react-device-detect";
 import { isMobile } from "react-device-detect";
 import "../skills/Skills.css";
 
 // for testing
-rdd.isMobile = false;
+//rdd.isMobile = false;
 
 function RenderAppropriateComponent() {
   if (isMobile) {
