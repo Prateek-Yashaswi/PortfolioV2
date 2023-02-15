@@ -23,12 +23,12 @@
 
 #cards {
   display: flex;
-  width: fit-content;
+  width: 100%;
   margin: auto;
+  margin-top: 4%;
 }
 
 .customCard {
-  margin-left: 4%;
   margin-bottom: 6%;
 }
 
@@ -46,13 +46,12 @@
   margin: auto;
 }
 
-@media screen and (max-width: 600px) {
-  #cards {
-    display: block;
-    width: fit-content;
-    margin: auto;
-  }
+#cards-div-m {
+  width: 100%;
+  padding: 4%;
+}
 
+@media screen and (max-width: 600px) {
   .customCard {
     margin-top: 4%;
   }

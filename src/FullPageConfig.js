@@ -7,6 +7,8 @@ import Fullpage, {
 import CustomNavbar from "./components/navbar/CustomNavbar";
 import Home from "./components/home/Home";
 import MoreInformation from "./components/information/MoreInformation";
+import Skills from "./components/skills/Skills";
+import Projects from "./components/projects/Projects";
 
 const FullPageConfig = () => {
   const ContentStyle = {
@@ -31,11 +33,11 @@ const FullPageConfig = () => {
         </FullpageSection>
 
         <FullpageSection style={{ ContentStyle }}>
-          <h1>Experience</h1>
+          <Skills></Skills>
         </FullpageSection>
 
         <FullpageSection style={{ ContentStyle }}>
-          <h1>Projects</h1>
+          <Projects></Projects>
         </FullpageSection>
 
         <FullpageSection style={{ ContentStyle }}>

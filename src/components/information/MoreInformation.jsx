@@ -9,12 +9,8 @@ import { Stack } from "@mui/system";
 import PropTypes from "prop-types";
 import React from "react";
 import Button from "react-bootstrap/Button";
-import * as rdd from "react-device-detect";
 import { isMobile } from "react-device-detect";
 import "../information/MoreInformation.css";
-
-// for testing
-rdd.isMobile = true;
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -65,7 +61,7 @@ function CustomElement() {
     {
       examName: "B-Tech CSE",
       schoolName: "SRM Institute Of Science And Technology",
-      passingYear: "2018",
+      passingYear: "2022",
       score: "9.54 CGPA",
     },
   ];
@@ -77,16 +73,16 @@ function CustomElement() {
 
   if (isMobile) {
     return (
-      <div>
+      <div id="cards-div-m">
         <Box
           sx={{
             margin: "auto",
-            width: "fit-content",
+            width: "100%",
             alignItems: "center",
           }}
         >
           <Card
-            sx={{ minWidth: "60%", maxWidth: "85%" }}
+            sx={{ minWidth: "100%", maxWidth: "100%" }}
             className="customCard"
             variant="outlined"
           >
@@ -122,73 +118,75 @@ function CustomElement() {
     );
   } else {
     return (
-      <div id="cards-div">
-        <Card
-          sx={{ minWidth: "275" }}
-          className="customCard"
-          variant="outlined"
-        >
-          <CardContent>
-            <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
-              gutterBottom
-            >
-              {details[0].examName}
-            </Typography>
-            <Typography variant="h5" component="div">
-              {details[0].schoolName}
-            </Typography>
-            <Typography sx={{ mb: 1.5 }} color="text.secondary">
-              {details[0].score}
-            </Typography>
-            <Typography variant="body2">{details[0].passingYear}</Typography>
-          </CardContent>
-        </Card>
-        <Card
-          sx={{ minWidth: "275" }}
-          className="customCard"
-          variant="outlined"
-        >
-          <CardContent>
-            <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
-              gutterBottom
-            >
-              {details[1].examName}
-            </Typography>
-            <Typography variant="h5" component="div">
-              {details[1].schoolName}
-            </Typography>
-            <Typography sx={{ mb: 1.5 }} color="text.secondary">
-              {details[1].score}
-            </Typography>
-            <Typography variant="body2">{details[1].passingYear}</Typography>
-          </CardContent>
-        </Card>
-        <Card
-          sx={{ minWidth: "275" }}
-          className="customCard"
-          variant="outlined"
-        >
-          <CardContent>
-            <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
-              gutterBottom
-            >
-              {details[2].examName}
-            </Typography>
-            <Typography variant="h5" component="div">
-              {details[2].schoolName}
-            </Typography>
-            <Typography sx={{ mb: 1.5 }} color="text.secondary">
-              {details[2].score}
-            </Typography>
-            <Typography variant="body2">{details[2].passingYear}</Typography>
-          </CardContent>
-        </Card>
+      <div id="cards-div" sx={{ marginRight: "4%" }}>
+        <Stack direction="row" spacing={5}>
+          <Card
+            sx={{ minWidth: "30%", height: "90%" }}
+            className="customCard"
+            variant="outlined"
+          >
+            <CardContent>
+              <Typography
+                sx={{ fontSize: 14 }}
+                color="text.secondary"
+                gutterBottom
+              >
+                {details[0].examName}
+              </Typography>
+              <Typography variant="h5" component="div">
+                {details[0].schoolName}
+              </Typography>
+              <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                {details[0].score}
+              </Typography>
+              <Typography variant="body2">{details[0].passingYear}</Typography>
+            </CardContent>
+          </Card>
+          <Card
+            sx={{ minWidth: "30%", height: "90%" }}
+            className="customCard"
+            variant="outlined"
+          >
+            <CardContent>
+              <Typography
+                sx={{ fontSize: 14 }}
+                color="text.secondary"
+                gutterBottom
+              >
+                {details[1].examName}
+              </Typography>
+              <Typography variant="h5" component="div">
+                {details[1].schoolName}
+              </Typography>
+              <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                {details[1].score}
+              </Typography>
+              <Typography variant="body2">{details[1].passingYear}</Typography>
+            </CardContent>
+          </Card>
+          <Card
+            sx={{ minWidth: "30%", height: "90%" }}
+            className="customCard"
+            variant="outlined"
+          >
+            <CardContent>
+              <Typography
+                sx={{ fontSize: 14 }}
+                color="text.secondary"
+                gutterBottom
+              >
+                {details[2].examName}
+              </Typography>
+              <Typography variant="h5" component="div">
+                {details[2].schoolName}
+              </Typography>
+              <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                {details[2].score}
+              </Typography>
+              <Typography variant="body2">{details[2].passingYear}</Typography>
+            </CardContent>
+          </Card>
+        </Stack>
       </div>
     );
   }

@@ -1,0 +1,14 @@
+.sub-heading-projects {
+  width: fit-content;
+  margin: auto;
+  border-bottom: 1px solid black;
+  margin-bottom: 2%;
+}
+
+#slider {
+  height: 80vh;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #070707;
+  color: #fff;
+}
